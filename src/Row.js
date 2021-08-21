@@ -18,10 +18,15 @@ function Row({ title, fetchUrl }) {
     );
     console.log(movies);
     return (
-        <div>
+        <div className="row">
             {/* title */}
             <h2>{title}</h2>
 
+            <div className="">
+                {movies.map(movie => (
+                    <img src={movie.poster_path} alt={movie.name} />
+                ))}
+            </div>
             {/* container -> poster */}
         </div>
     )
